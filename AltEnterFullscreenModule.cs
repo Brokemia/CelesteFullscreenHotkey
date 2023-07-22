@@ -10,9 +10,6 @@ namespace Celeste.Mod.AltEnterFullscreen {
         public override Type SettingsType => typeof(AltEnterFullscreenModuleSettings);
         public static AltEnterFullscreenModuleSettings Settings => (AltEnterFullscreenModuleSettings) Instance._Settings;
 
-        public override Type SessionType => typeof(AltEnterFullscreenModuleSession);
-        public static AltEnterFullscreenModuleSession Session => (AltEnterFullscreenModuleSession) Instance._Session;
-
         private static readonly MethodInfo SetFullScreenInfo = typeof(MenuOptions).GetMethod("SetFullscreen", BindingFlags.NonPublic | BindingFlags.Static);
 
         public AltEnterFullscreenModule() {
